@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Route View Controller-->
+        <scene sceneID="thJ-yN-B8P">
+            <objects>
+                <viewController storyboardIdentifier="RouteViewController" id="MhR-7w-fcU" customClass="RouteViewController" customModule="GoogleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOg-ow-9CD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKw-93-Bly">
+                                <rect key="frame" x="0.0" y="732" width="393" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRC-ex-V7W">
+                                        <rect key="frame" x="15.999999999999996" y="24" width="49.666666666666657" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2 km 6:42 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfP-wn-f8y">
+                                        <rect key="frame" x="16" y="50" width="118" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdL-LJ-sZZ">
+                                        <rect key="frame" x="253" y="24" width="52" height="52"/>
+                                        <color key="backgroundColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="0zt-nq-Xvo"/>
+                                            <constraint firstAttribute="height" constant="52" id="lc0-JZ-aPr"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_direction_light"/>
+                                        <connections>
+                                            <action selector="directionAction" destination="MhR-7w-fcU" eventType="touchUpInside" id="IVR-qM-Fcl"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGa-Ir-A85">
+                                        <rect key="frame" x="317" y="24" width="60" height="52"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz9-ge-E67">
+                                                <rect key="frame" x="4" y="0.0" width="52" height="52"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="4D8-Va-s9v"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Exit"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Exit"/>
+                                                <connections>
+                                                    <action selector="exitAction" destination="MhR-7w-fcU" eventType="touchUpInside" id="Ken-tj-TP8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Sz9-ge-E67" secondAttribute="bottom" id="8qa-a4-538"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sz9-ge-E67" secondAttribute="trailing" constant="4" id="Mri-1s-w1j"/>
+                                            <constraint firstItem="Sz9-ge-E67" firstAttribute="leading" secondItem="iGa-Ir-A85" secondAttribute="leading" constant="4" id="a5H-Ma-7uq"/>
+                                            <constraint firstItem="Sz9-ge-E67" firstAttribute="top" secondItem="iGa-Ir-A85" secondAttribute="top" id="gWI-fT-D0p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6sg-W4-xHi"/>
+                                    <constraint firstItem="bfP-wn-f8y" firstAttribute="leading" secondItem="BKw-93-Bly" secondAttribute="leading" constant="16" id="9cv-cu-NkS"/>
+                                    <constraint firstItem="bfP-wn-f8y" firstAttribute="top" secondItem="jRC-ex-V7W" secondAttribute="bottom" constant="5" id="DLY-1d-HKv"/>
+                                    <constraint firstItem="iGa-Ir-A85" firstAttribute="centerY" secondItem="mdL-LJ-sZZ" secondAttribute="centerY" id="NH0-eW-HQa"/>
+                                    <constraint firstItem="iGa-Ir-A85" firstAttribute="leading" secondItem="mdL-LJ-sZZ" secondAttribute="trailing" constant="12" id="OtJ-wa-UQi"/>
+                                    <constraint firstItem="jRC-ex-V7W" firstAttribute="leading" secondItem="BKw-93-Bly" secondAttribute="leading" constant="16" id="fM7-hc-mDJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="iGa-Ir-A85" secondAttribute="trailing" constant="16" id="oef-ic-fi4"/>
+                                    <constraint firstItem="mdL-LJ-sZZ" firstAttribute="top" secondItem="BKw-93-Bly" secondAttribute="top" constant="24" id="vGF-ea-kC4"/>
+                                    <constraint firstItem="jRC-ex-V7W" firstAttribute="top" secondItem="BKw-93-Bly" secondAttribute="top" constant="24" id="ztW-FW-gbu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RMY-eN-byJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BKw-93-Bly" firstAttribute="leading" secondItem="RMY-eN-byJ" secondAttribute="leading" id="2Gq-lp-nqf"/>
+                            <constraint firstItem="RMY-eN-byJ" firstAttribute="trailing" secondItem="BKw-93-Bly" secondAttribute="trailing" id="fKp-J4-Aya"/>
+                            <constraint firstAttribute="bottom" secondItem="BKw-93-Bly" secondAttribute="bottom" id="vnu-vf-Sas"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="BKw-93-Bly" id="PuN-3I-5dA"/>
+                        <outlet property="bottomViewBottomConstraint" destination="vnu-vf-Sas" id="Ub4-LU-gFh"/>
+                        <outlet property="directionButton" destination="mdL-LJ-sZZ" id="OnV-ab-4sY"/>
+                        <outlet property="distanceLabel" destination="bfP-wn-f8y" id="kUX-ZT-Na6"/>
+                        <outlet property="exitButton" destination="Sz9-ge-E67" id="LqI-BE-ZAF"/>
+                        <outlet property="exitContainerView" destination="iGa-Ir-A85" id="smw-ML-agC"/>
+                        <outlet property="timeLabel" destination="jRC-ex-V7W" id="e3p-0b-7zc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1YH-qN-6Va" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.10687022900763" y="-62.676056338028175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_direction_light" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
